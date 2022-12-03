@@ -41,7 +41,6 @@ class FileHandling(private val filename: String) {
                                 list.add(this)
                             }
                     }
-
                 }
             this[start] = list.toList()
         }
@@ -57,5 +56,4 @@ class FileHandling(private val filename: String) {
         get() = FileHandling::class.java
             .getResourceAsStream(filename)!!
             .bufferedReader()
-
 }

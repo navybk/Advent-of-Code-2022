@@ -2,6 +2,7 @@ package day2
 
 import base.FileHandling
 import base.expect
+import base.result
 
 fun main() {
     Day2()
@@ -23,9 +24,7 @@ class Day2 {
             first.losesAgainst == assumption -> assumption.value + RpsResult.Win.score
             else -> assumption.value
         }
-    }.apply {
-        println("result: $this")
-    }
+    }.result()
 
     private fun List<Pair<Rps, Char>>.resolveSecond() = sumOf { (first, second) ->
         when (second.toWinStategy()) {
@@ -33,9 +32,7 @@ class Day2 {
             RpsResult.Lose -> first.winAgainst.value
             else -> first.value + 3
         }
-    }.apply {
-        println("result: $this")
-    }
+    }.result()
 
     private fun getInput(filename: String) = FileHandling("/day2/$filename").map {
         it[0].toNum() to it[2]
