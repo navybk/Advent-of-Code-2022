@@ -69,7 +69,6 @@ class Day5 {
                     stacks[index] = stacks[index] ?: mutableListOf()
                     stacks[index]!!.add(s[1])
                 }
-
             }
         }
         return Supplies(

@@ -18,8 +18,8 @@ class Day4 {
     }
 
     private fun List<List<Int>>.resolveFirst(): Int = count { ranges ->
-        (ranges[0] >= ranges[2] && ranges[1] <= ranges[3])
-                || (ranges[2] >= ranges[0] && ranges[3] <= ranges[1])
+        (ranges[0] >= ranges[2] && ranges[1] <= ranges[3]) ||
+                (ranges[2] >= ranges[0] && ranges[3] <= ranges[1])
     }.result()
 
     private fun List<List<Int>>.resolveSecond() = count { ranges ->
